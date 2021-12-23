@@ -1,0 +1,11 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Login application" %></h1>
+   <h2><%= gettext "Home Page"%></h2>
+    <div class="page-header">
+                
+                 <%= link "Register", to: Routes.registration_path(@conn, :new), class: "btn btn-success" %>
+            </div>
+    
+     <%= link "Login", to: Routes.session_path(@conn, :new), class: "btn btn-success" %>
+</section>
+

@@ -1,0 +1,14 @@
+<%= form_for @changeset, Routes.password_reset_path(@conn, :update, @customer.password_reset_token), [class: "elixircasts-form"], fn f -> %>
+  <%= label f, :encrypted_password, "New password" %>
+  <%= password_input f, :encrypted_password, required: true %>
+  <%= error_tag f, :encrypted_password %>
+
+  <%= label f, :encrypted_password_confirmation, "New password confirmation" %>
+  <%= password_input f, :encrypted_password_confirmation, required: true %>
+  <br>
+  <%= error_tag f, :encrypted_password_confirmation %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

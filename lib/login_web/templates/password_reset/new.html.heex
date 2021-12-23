@@ -1,0 +1,11 @@
+<%= form_for @conn, Routes.password_reset_path(@conn, :create), 
+  [class: "elixircasts-form"], fn f -> %>
+  <%= text_input f, :email,
+    placeholder: "email",
+    required: true %>
+  <%= error_tag f, :email %>
+
+  <div>
+    <%= submit "Send password reset email" %>
+  </div>
+<% end %>
